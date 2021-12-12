@@ -12,8 +12,6 @@ body {
 
 header {
   padding: 2.5rem;
-  align-items: center;
-  justify-content: center;
   font-size: 30px;
   cursor: pointer;
 }
@@ -29,7 +27,7 @@ nav {
   list-style: none;
   gap: 8rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .who {
@@ -57,6 +55,10 @@ nav {
 }
 
 .benefits {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background: #25a954;
   padding: 2rem;
   margin: 0;
@@ -81,6 +83,9 @@ nav {
 }
 
 .partners {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background: #e31d65;
   padding: 2rem;
   margin: 0;
@@ -136,4 +141,32 @@ footer {
 
 a {
   color: white;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    height: 100px;
+  }
+  header {
+    padding: 0;
+    width: 100%;
+  }
+  .hlist {
+    font-size: 20px;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .who,
+  .why,
+  .benefits,
+  .howitwork,
+  .partner,
+  .subscribe {
+    font-size: 20px;
+  }
 }
